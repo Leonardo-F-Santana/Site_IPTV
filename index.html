@@ -54,7 +54,28 @@
                 <!-- Problema -->
                 <div class="glass-card pain-card">
                     <div class="card-icon red">
-                        <i class="fa-solid fa-money-bill-wave"></i>
+                        <!-- Ícone Animado: Acúmulo de Faturas -->
+                        <div class="animated-icon bills-stack-anim">
+                            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+                                <g class="bills-shake">
+                                    <!-- Fatura 1 (Base) -->
+                                    <g class="bill bill-1">
+                                        <rect x="35" y="45" width="45" height="50" rx="3" fill="#1a1a1a"/>
+                                        <path d="M45 55 h25 M45 65 h15 M45 75 h25" />
+                                    </g>
+                                    <!-- Fatura 2 (Meio) -->
+                                    <g class="bill bill-2">
+                                        <rect x="20" y="25" width="45" height="50" rx="3" fill="#1a1a1a"/>
+                                        <path d="M30 35 h25 M30 45 h15 M30 55 h25" />
+                                    </g>
+                                    <!-- Fatura 3 (Topo) -->
+                                    <g class="bill bill-3">
+                                        <rect x="40" y="5" width="45" height="50" rx="3" fill="#1a1a1a"/>
+                                        <path d="M50 15 h25 M50 25 h15 M50 35 h25" stroke="#ff4444"/>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
                     </div>
                     <h3>Cansado de Gastar Muito?</h3>
                     <p>Cancele Netflix, Disney+, Prime e TV a cabo. Economize <strong>mais de R$ 200/mês</strong> cortando assinaturas caras e picadas.</p>
@@ -63,7 +84,16 @@
                 <!-- Solução -->
                 <div class="glass-card solution-card">
                     <div class="card-icon green">
-                        <i class="fa-solid fa-signal"></i>
+                        <!-- Ícone Animado: Antena / Sinal -->
+                        <div class="animated-icon wifi-anim">
+                            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="6" stroke-linecap="round">
+                                <path d="M50 85 v-20"/>
+                                <circle cx="50" cy="65" r="4" fill="currentColor" stroke="none"/>
+                                <path class="wave wave-1" d="M38 53 A 17 17 0 0 1 62 53" />
+                                <path class="wave wave-2" d="M26 41 A 34 34 0 0 1 74 41" />
+                                <path class="wave wave-3" d="M14 29 A 51 51 0 0 1 86 29" />
+                            </svg>
+                        </div>
                     </div>
                     <h3>Estabilidade de Verdade</h3>
                     <p>Sem travamentos! Tecnologia de ponta garantindo <strong>99.9% Uptime</strong> para você nunca perder seu conteúdo favorito.</p>
@@ -115,11 +145,28 @@
                     <li><i class="fa-solid fa-hand-fist text-red"></i> UFC e Combate</li>
                     <li><i class="fa-solid fa-basketball text-orange"></i> NBA e NFL</li>
                 </ul>
-                <a href="#" class="cta-button secondary pulse-effect mt-4">GARANTA SEU ACESSO</a>
+                <a href="https://wa.me/5521972463302?text=Quero%20garantir%20meu%20acesso%20a%20TV%20Pela%20Net" target="_blank" class="cta-button secondary pulse-effect mt-4">GARANTA SEU ACESSO</a>
             </div>
             <div class="sports-image">
                 <div class="image-placeholder glass-card sports-card">
-                    <i class="fa-solid fa-volleyball ball-icon"></i>
+                    <div class="stadium-anim-container">
+                        <!-- Efeito Glow do Estádio -->
+                        <div class="stadium-glow"></div>
+                        <!-- Bola Quicando -->
+                        <div class="ball-wrapper-x">
+                            <div class="ball-wrapper-y">
+                                <svg class="soccer-ball" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="4"/>
+                                    <polygon points="50,25 65,40 58,60 42,60 35,40" fill="currentColor"/>
+                                    <line x1="50" y1="25" x2="50" y2="5" stroke="currentColor" stroke-width="4"/>
+                                    <line x1="65" y1="40" x2="90" y2="35" stroke="currentColor" stroke-width="4"/>
+                                    <line x1="58" y1="60" x2="75" y2="85" stroke="currentColor" stroke-width="4"/>
+                                    <line x1="42" y1="60" x2="25" y2="85" stroke="currentColor" stroke-width="4"/>
+                                    <line x1="35" y1="40" x2="10" y2="35" stroke="currentColor" stroke-width="4"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
                     <h3>Sinta a emoção do estádio na sua sala</h3>
                 </div>
             </div>

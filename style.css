@@ -328,6 +328,71 @@ a {
 }
 
 /* ==============================
+   ANIMATED ICONS
+============================== */
+.animated-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem auto;
+}
+
+/* Invoices Stack Animation */
+.bills-stack-anim {
+    color: var(--text-muted);
+}
+
+.bills-shake {
+    animation: stressShake 3s infinite;
+}
+
+.bills-shake .bill {
+    opacity: 0;
+    animation: stackDrop 3s infinite;
+}
+
+.bills-shake .bill-1 { animation-delay: 0s; }
+.bills-shake .bill-2 { animation-delay: 0.2s; }
+.bills-shake .bill-3 { animation-delay: 0.4s; }
+
+@keyframes stackDrop {
+    0% { transform: translateY(-30px); opacity: 0; }
+    10% { transform: translateY(0); opacity: 1; }
+    80% { transform: translateY(0); opacity: 1; }
+    90% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@keyframes stressShake {
+    0%, 30% { transform: translateX(0); }
+    32% { transform: translateX(-3px) rotate(-2deg); }
+    34% { transform: translateX(3px) rotate(2deg); }
+    36% { transform: translateX(-3px) rotate(-2deg); }
+    38% { transform: translateX(3px) rotate(2deg); }
+    40%, 100% { transform: translateX(0); }
+}
+
+/* Wifi / Antenna Animation */
+.wifi-anim {
+    color: var(--neon-green);
+}
+
+.wifi-anim .wave {
+    opacity: 0;
+    animation: radiate 2s infinite ease-out;
+}
+
+.wifi-anim .wave-1 { animation-delay: 0s; }
+.wifi-anim .wave-2 { animation-delay: 0.4s; }
+.wifi-anim .wave-3 { animation-delay: 0.8s; }
+
+@keyframes radiate {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* ==============================
    FEATURES
 ============================== */
 .features-grid {
@@ -405,11 +470,67 @@ a {
     border: 1px solid rgba(255,170,0,0.2);
 }
 
-.ball-icon {
-    font-size: 4rem;
-    color: var(--neon-orange);
-    margin-bottom: 1rem;
-    text-shadow: 0 0 20px var(--neon-orange-glow);
+/* Stadium Animation */
+.stadium-anim-container {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.stadium-glow {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 20px;
+    background: var(--neon-green);
+    filter: blur(20px);
+    border-radius: 50%;
+    animation: stadiumPulse 2s infinite alternate;
+    z-index: 0;
+}
+
+@keyframes stadiumPulse {
+    0% { opacity: 0.2; transform: translateX(-50%) scale(0.8); }
+    100% { opacity: 0.8; transform: translateX(-50%) scale(1.4); }
+}
+
+.ball-wrapper-x {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    animation: moveX 2.5s linear infinite alternate;
+}
+
+.ball-wrapper-y {
+    animation: bounceY 0.5s ease-in infinite alternate;
+}
+
+.soccer-ball {
+    width: 45px;
+    height: 45px;
+    color: #fff;
+    animation: rollBall 2.5s linear infinite alternate;
+}
+
+@keyframes moveX {
+    0% { transform: translateX(-55px); }
+    100% { transform: translateX(55px); }
+}
+
+@keyframes bounceY {
+    0% { transform: translateY(-60px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes rollBall {
+    0% { transform: rotate(-180deg); }
+    100% { transform: rotate(180deg); }
 }
 
 .sports-card h3 {
