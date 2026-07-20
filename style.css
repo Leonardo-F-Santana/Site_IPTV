@@ -779,7 +779,6 @@ a {
     height: auto;
     max-height: 400px;
     object-fit: contain;
-    mix-blend-mode: screen; /* Makes the black background transparent */
 }
 
 .reseller-content {
