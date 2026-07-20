@@ -494,36 +494,66 @@ a {
    DEVICES
 ============================== */
 .device-icons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 .device {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     color: #fff;
-    opacity: 0.8;
-    transition: opacity 0.3s, transform 0.3s;
+    transition: all 0.3s ease;
+    background: rgba(25, 25, 30, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 2rem 1rem;
+    text-align: center;
 }
 
 .device:hover {
-    opacity: 1;
     transform: translateY(-5px);
-    color: var(--neon-blue);
+    background: rgba(25, 25, 30, 0.9);
+    border-color: var(--neon-blue);
+    box-shadow: 0 10px 20px rgba(0, 212, 255, 0.15);
 }
 
 .device i {
     font-size: 3rem;
-    margin-bottom: 0.5rem;
-    text-shadow: 0 0 10px rgba(255,255,255,0.2);
+    margin-bottom: 1rem;
+    color: var(--neon-blue);
+    transition: all 0.3s ease;
 }
 
 .device:hover i {
     text-shadow: 0 0 15px var(--neon-blue-glow);
+}
+
+.device-svg {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    fill: var(--neon-blue);
+    transition: all 0.3s ease;
+}
+
+.device:hover .device-svg {
+    filter: drop-shadow(0 0 15px var(--neon-blue-glow));
+}
+
+.device span {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.device p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
 }
 
 /* ==============================
